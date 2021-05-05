@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad libs time!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class = "container text-center">
+        <h1>Hey it's Me</h1>
+
+        <div class = "form-group">
+            <input class="form-control" id = "noun1" placeholder="noun">
+        </div>
+        <div class = "form-group">
+            <input class="form-control" id = "noun2" placeholder="noun">
+        </div>
+        <div class = "form-group">
+            <input class="form-control" id = "noun3" placeholder="noun">
+        </div>
+        <div class = "form-group">
+            <input class="form-control" id = "noun4" placeholder="noun">
+        </div>
+        <div class = "form-group">
+            <input class="form-control" id = "noun5" placeholder="noun">
+        </div>
+        <div class = "form-group">
+            <input class="form-control" id = "noun6" placeholder="noun">
+        </div>
+        <div class = "form-group">
+            <input class="form-control" id = "noun7" placeholder="noun">
+        </div>
+        <div class = "form-group">
+            <input class="form-control" id = "pluralNoun1" placeholder="noun(plural)">
+        </div>
+        <div class = "form-group">
+            <input class="form-control" id = "pluralNoun2" placeholder="noun(plural)">
+        </div>
+        <div class = "form-group">
+            <input class="form-control" id = "person1" placeholder="person">
+        </div>
+        <div class = "form-group">
+            <input class="form-control" id = "person2" placeholder="person">
+        </div>
+        <div class = "form-group">
+            <input class="form-control" id = "verb" placeholder="verb">
+        </div>
+        <div class = "form-group">
+            <input class="form-control" id = "bodyPart1" placeholder="body part plural">
+        </div>
+        <div class = "form-group">
+            <input class="form-control" id = "bodyPart2" placeholder="body part plural">
+        </div>
+        <div class = "form-group">
+            <input class="form-control" id = "adjective1" placeholder="adjectives">
+        </div>
+        <div class = "form-group">
+            <input class="form-control" id = "adjective2" placeholder="adjectives">
+        </div>
+        <div class = "form-group">
+            <input class="form-control" id = "liquid" placeholder="type of liquid">
+        </div>
+
+        
+        
+        <button onclick="buildStory()" class = "btn btn-success">Assemble story</button>
+
+        <h1>Your story down bellow</h1>
+        <h3 id = "story"></h3>
+    </div>
+</body>
+
+<script>
+    const buildStory = () => {
+        const adjective1 = document.getElementById("adjective1").value;
+        const adjective2 = document.getElementById("adjective2").value;
+        const noun1 = document.getElementById("noun1").value;
+        const noun2 = document.getElementById("noun2").value;
+        const noun3 = document.getElementById("noun3").value;
+        const noun4 = document.getElementById("noun4").value;
+        const noun5 = document.getElementById("noun5").value;
+        const noun6 = document.getElementById("noun6").value;
+        const noun7 = document.getElementById("noun7").value;
+        const pluralNoun1 = document.getElementById("pluralNoun1").value;
+        const pluralNoun2 = document.getElementById("pluralNoun2").value;
+        const person1 = document.getElementById("person1").value;
+        const person2 = document.getElementById("person2").value;
+        const verb = document.getElementById("verb").value;
+        const bodyPart1 = document.getElementById("bodyPart1").value;
+        const bodyPart2 = document.getElementById("bodyPart2").value;
+        const liquid = document.getElementById("liquid").value;
+
+
+        let story = document.getElementById("story");
+        const storyText = `It was Thanksgiving,  and the scent of succulent roast ${noun1} wafted  through my house. 
+        "${person1}, it's time to ${verb}!" my mother called. I Couldn't wait to get my ${bodyPart1} on that ${adjective1} Thanksgiving meal
+        My family sat around the dining-room ${noun2}. The table was laid out with every kind of ${noun3} imaginable. There was a basket of hot buttered ${noun4} and galsses of sparkling ${liquid}. The ${adjective2} turkey sat, steaming next to a tureen of ${noun5} gravy. A bowl of ruby-red ${noun6} sauce, a sweet-${noun7} casserole, and a dish fo mashed ${pluralNoun1} tempted my taste buds. But  th dish I looked forward to most was Grandma ${person2}'s famous ${noun2} pie. Thanksgiving is my favorite Holiday, ${bodyPart2} down`;
+    
+        story.innerHTML = storyText;
+
+    }
+</script>
+</html>
